@@ -45,6 +45,7 @@
 		(map! [n] :<leader>lS "<Cmd>lua require('vscode').call('workbench.action.showAllSymbols')<CR>")
 		(map! [n] :<leader>lR "<Cmd>lua require('vscode').call('editor.action.goToReferences')<CR>")
 		(map! [n] :gr "<Cmd>lua require('vscode').call('editor.action.goToReferences')<CR>")
+		(map! [n] :gt "<Cmd>lua require('vscode').call('editor.action.peekTypeDefinition')<CR>")
 		(map! [n] :<leader>n "<Cmd>lua require('vscode').call('workbench.action.files.newUntitledFile')<CR>")
 		(map! [n] :<leader>k "<Cmd>lua require('vscode').call('workbench.action.closeActiveEditor')<CR>")
 		(map! [n] :<leader>e "<Cmd>lua require('vscode').call('workbench.view.explorer')<CR>")
