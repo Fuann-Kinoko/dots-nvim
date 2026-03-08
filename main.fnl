@@ -8,6 +8,8 @@
 (when vim.g.vscode
 	(g! clipboard vim.g.vscode_clipboard))
 
+(vim.opt.iskeyword:remove "_")
+(vim.opt.iskeyword:remove "-")
 (set! updatetime 1000)
 (set! tabstop 4)
 (set! shiftwidth 4)
