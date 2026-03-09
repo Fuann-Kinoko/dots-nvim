@@ -1,5 +1,10 @@
 (require-macros :hibiscus.vim)
 
+(fn open-relative-path []
+  (vim.api.nvim_feedkeys
+    (.. ":e " (vim.fn.expand "%:h") "\\")
+    :n true))
+
 (fn map-normal-bindings []
   ; 基础移动
   (map! [n] :<A-v> "<C-u>")   ; 上移半页
@@ -14,6 +19,7 @@
   (map! [n] :<leader>j "J")   ; 合并下一行
   (map! [n] :<leader><leader> "<Cmd>nohl<CR><Cmd>mode<CR>") ; 清除高亮
   (map! [n] :<leader>sen "<Cmd>e $MYVIMRC/../main.fnl<CR>") ; 编辑器设置
+  (map! [n] :<leader>f open-relative-path) ; 预输入当前buffer目录路径
   )
 
 (fn map-visual-bindings []
